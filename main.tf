@@ -87,7 +87,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                            = "my-ubuntu-vm"
   location                        = azurerm_resource_group.rg.location
   resource_group_name             = azurerm_resource_group.rg.name
-  size                            = "Standard_DS1_v2" # Basic VM size
+  size                            = "Standard_B2S" # Basic VM size
   network_interface_ids           = [azurerm_network_interface.nic.id]
   disable_password_authentication = false
   admin_username                  = "azureuser"
