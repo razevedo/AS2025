@@ -1,3 +1,16 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0" # Use a version constraint appropriate for your project
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+}
+
 # 1. Resource Group
 resource "azurerm_resource_group" "rg" {
   name     = "my-terraform-rg"
